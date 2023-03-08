@@ -10,7 +10,7 @@ const userRoute = require("./routes/users.route");
 const authRoute = require("./routes/auth.route");
 const cookieParser = require('cookie-parser')
 const cors = require('cors')
-const PORT = 8800
+const PORT = 5500
 
 
 dotenv.config();

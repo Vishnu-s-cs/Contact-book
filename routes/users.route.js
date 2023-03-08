@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { verify, verifyTokenAndAuthorization} = require("../middleware/verifyToken");
-const { getUser, getAllUsers } = require("../controllers/users.controller");
+const { getUser, getAllUsers, updateUser, deleteUser } = require("../controllers/users.controller");
 
 //get a contact with simple jwt verification
 router.get("/:id", verify, getUser);
