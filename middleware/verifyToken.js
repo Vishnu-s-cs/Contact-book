@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-
+const User = require('../models/users.model');
 function verify(req, res, next) {
   //double checking for accessToken because in some cases cookie wont send readly with req object after https encryption
   const authHeader =
@@ -20,4 +20,15 @@ function verify(req, res, next) {
   }
 }
 
-module.exports = { verify };
+const verifyTokenAndAuthorization=(req,res,next)=>{
+  verify(req,res,async()=>{
+   
+      if(req.params.id===req.user.id){
+          next()
+      }else{
+          res.status(403).json('you are not allowed to to that!')
+      }
+  })
+}
+
+module.exports = { verify, verifyTokenAndAuthorization };
