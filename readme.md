@@ -39,14 +39,14 @@ Start the server:
 npm start
 
 ## API Endpoints
-## Endpoint	      Method	Description
-* /api/users	      GET	  Get all contacts
-* /api/users/:id	  GET	  Get a contact by ID
-* /api/users	      POST	  Create a new contact
-* /api/users/:id  	PUT	  Update a contact by ID
-* /api/users/:id	 DELETE	    Delete a contact by ID
-* /api/register	  POST	  Register a new user
-* /api/login	     POST	  Log in an existing user
+## Endpoint	    -  Method	- Description
+* /api/users	    -  GET	-  Get all contacts
+* /api/users/:id	-  GET	-  Get a contact by ID
+* /api/users	   -   POST	 - Create a new contact
+* /api/users/:id  -	PUT	-  Update a contact by ID
+* /api/users/:id -	 DELETE	 -   Delete a contact by ID
+* /api/register	 - POST	-  Register a new user
+* /api/login	-     POST	-  Log in an existing user
 ## Authorization
 This API uses JWT to validate users. A user can get a JWT token by logging in through the /api/login endpoint. The token should be passed in the Authorization header as a Bearer token for all endpoints that require authorization.
 
